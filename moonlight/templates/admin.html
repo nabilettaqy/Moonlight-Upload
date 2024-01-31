@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>Administration Page</title>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+</head>
+<body class="center-content" style="margin-top: 50px;"> 
+    {% if message %}
+    <div class="message">{{ message }}</div>
+    {% endif %}
+    <form method="POST" action="/admin/update" class="center-form"> 
+        <label for="allowed_extensions">Allowed File Extensions (comma-separated):</label>
+        <input type="text" name="allowed_extensions" value="{{ allowed_extensions }}">
+        <label for="max_archive_size">Max File Size (MB):</label>
+        <input type="text" name="max_archive_size" value="{{ max_archive_size }}">
+        <label for="max_preview_size">Max Preview Size (MB):</label>
+        <input type="text" name="max_preview_size" value="{{ max_preview_size }}">
+        <label for="main_page_message">Main Page Message:</label>
+        <textarea name="main_page_message" rows="4" cols="50">{{ main_page_message }}</textarea>
+        <input type="submit" value="Update Configuration">
+    </form>
+    <form method="POST" action="/admin/show_entries" class="center-form"> 
+        <label for="file_search">Search for a File:</label>
+        <input type="text" name="file_search" id="file_search" placeholder="Enter filename or ID">
+        <input type="submit" value="Search">
+    </form>
+    <div class="footer">
+        <footer>
+            <small class="smallprints"><a href="/tos">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></small>
+            <br>
+            <small>2023, Made with ❤️ by <a href="#" target="_blank">Insomnia</a></small>
+        </footer>
+    </div>
+</body>
+</html>

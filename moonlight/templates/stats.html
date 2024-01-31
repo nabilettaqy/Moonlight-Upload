@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>Stats - Moonlight Upload</title>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+</head>
+<body class="bg-dark text-light">
+    <div class="container-center">
+        <div class="container p-4">
+            <div>
+                <div class="title-container">
+                    <img class="logo-img" src="{{ url_for('static', filename='img/logo.webp') }}">
+                    <img class="logo-text" src="{{ url_for('static', filename='img/logo6.png') }}">
+                    <img class="logo-mini" src="{{ url_for('static', filename='img/logomini.png') }}">
+                    <br>
+                    <br>
+                    <small class="title-smallprints">No JS, No Cookies, No ads, No Censorship, No Glowies, Your files, your business...</small>
+                    <hr class="rounded">
+                </div>
+            </div>
+        </div>
+        <p class="text-center">The data on this page is updated in real-time (exept for the latest donations).</p></p>
+        <div class="container p-4">
+            <article class="article-content">
+                <h1 class="title-box">Statistics:</h1>
+                <p>Number of stored files: <strong>{{ num_uploads }}</strong></p>
+                <p>Number of preview images: <strong>{{ num_previews }}</strong></p>
+                <p>Total views: <strong>{{ total_views }}</strong></p>
+                <p>Total downloads: <strong>{{ total_downloads }}</strong></p>
+                <p>Total size of uploaded files (MB): <strong>{{ total_size_mb }} Mb</strong></p>
+            </article>
+            <article class="article-content">
+                <h1 class="title-box">Latest Donations:</h1>
+                <small>If you want to support us, go see the <a href="/donation">donation page</a></small>
+                <br>
+                <br>
+                <p>No donnations yet.</p>
+            </article>
+            <a class="btn btn-primary" href="{{ url_for('index') }}">Back to Home</a>
+        </div>
+        <div class="footer">
+            <footer>
+                <small class="smallprints"><a href="/tos">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></small>
+                <br>
+                <small>2023, Made with ❤️ by <a href="#" target="_blank">Insomnia</a></small>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

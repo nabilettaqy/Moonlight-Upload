@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>Abuse - Moonlight Upload</title>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+</head>
+<body class="bg-dark text-light">
+    <div class="container-center">
+        <div class="container p-4">
+            <div>
+                <div class="title-container">
+                    <img class="logo-img" src="{{ url_for('static', filename='img/logo.webp') }}">
+                    <img class="logo-text" src="{{ url_for('static', filename='img/logo6.png') }}">
+                    <img class="logo-mini" src="{{ url_for('static', filename='img/logomini.png') }}">
+                    <br>
+                    <br>
+                    <small class="title-smallprints">No JS, No Cookies, No ads, No Censorship, No Glowies, Your files, your business...</small>
+                    <hr class="rounded">
+                </div>
+            </div>
+        </div>
+        <div class="container p-4">
+            <article class="article-content">
+                <h1 class="title-box">Abuse:</h1>
+                <p class="text-primary">
+                    <h5>Last updated: <strong>[Date of last update]</strong></h5>
+
+                    At moonlightupload.com, we take the issue of a abuse of our service seriously and are committed to ensuring the responsible use of it. While we respect user privacy, we also aim to promptly investigate and address any reports of abuse. To report a abuse of our service, please follow the instructions below.
+ 
+                    <h5>1. Submitting an Abuse Report</h5> 
+                    
+                    To report abuse, please send an email to [abuse email]. In your email, provide all relevant information, including full details of the incident and any supporting evidence, such as links of the hosted files.
+
+                    <h5>3. Law Enforcement</h5>
+ 
+                    We encourage law enforcement agencies to contact us at [legal email] if they suspect any illegal activity on our platform. However, please note that our privacy policy restricts the sharing of user data outside of our jurisdiction. Demands for user location data are unlikely to be successful due to the use of anonymizing tools and our commitment to user privacy. Nevertheless, we encourage law enforcement to submit abuse reports for our investigation.
+                </p>
+            </article>
+            <a class="btn btn-primary" href="{{ url_for('index') }}">Back to Home</a>
+        </div>
+        <div class="footer">
+            <footer>
+                <small class="smallprints"><a href="/tos">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></small>
+                <br>
+                <small>2023, Made with ❤️ by <a href="#" target="_blank">Insomnia</a></small>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

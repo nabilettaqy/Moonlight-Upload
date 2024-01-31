@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>Error - Moonlight Upload</title>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+</head>
+<body class="bg-dark text-light">
+    <div class="container p-4">
+        <div class="midnighttitle">
+            <div class="title-container">
+                <div class="container p-4">
+                    <div class="title-container">
+                        <img class="logo-img" src="{{ url_for('static', filename='img/logo.webp') }}">
+                        <img class="logo-text" src="{{ url_for('static', filename='img/logo6.png') }}">
+                        <img class="logo-mini" src="{{ url_for('static', filename='img/logomini.png') }}">
+                        <br>
+                        <br>
+                        <small class="title-smallprints">No JS, No Cookies, No ads, No Censorship, No Glowies, Your files, your business...</small>
+                        <hr class="rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container p-4">
+            <img src="{{ url_for('static', filename=error_image) }}" alt="Preview" class="img-fluid">
+            <h1 class="mb-3">{{ error }}</h1>
+            <br>
+            <a class="btn btn-primary" href="{{ url_for('index') }}">Back to Home</a>
+            <br>
+            <article class="article-content moontext">
+                <h2 class="mt-4">What is Moonlight Upload ?</h2>
+                <br>
+                🌙 Welcome to Moonlight Upload, where the night is dark, and so are yours secrets. 
+                <br>
+                <br>
+                🚫 No glowies here, just an online sanctuary for the internet's underground. We don't ask questions, and we don't keep logs. Your files, your business. 
+                <br>
+                <br>
+                🌐 No geolocation, no bloated scripts, no cookies, no JS, no censorship. 
+                <br>
+                <br>
+                🔒 Unleash your content in the shadows. We're your digital haven where anonymity reigns supreme. File hosting without the fuss. 
+                <br>
+                <br>
+                💰 No fancy suits or corporate greed. Just good ol' file sharing. It's like the wild west of the web, and you're the outlaw. 
+                <br>
+                <br>
+                🌌 Join us under the moonlight, where anonymity meets freedom. 
+            </article>
+        </div>
+        <div class="footer">
+            <footer>
+                <small class="smallprints"><a href="/tos">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></small>
+                <br>
+                <small>2023, Made with ❤️ by <a href="#" target="_blank">Insomnia</a></small>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

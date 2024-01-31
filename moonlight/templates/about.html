@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>About - Moonlight Upload</title>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+</head>
+<body class="bg-dark text-light">
+    <div class="container-center">
+        <div class="container p-4">
+            <div>
+                <div class="title-container">
+                    <img class="logo-img" src="{{ url_for('static', filename='img/logo.webp') }}">
+                    <img class="logo-text" src="{{ url_for('static', filename='img/logo6.png') }}">
+                    <img class="logo-mini" src="{{ url_for('static', filename='img/logomini.png') }}">
+                    <br>
+                    <br>
+                    <small class="title-smallprints">No JS, No Cookies, No ads, No Censorship, No Glowies, Your files, your business...</small>
+                    <hr class="rounded">
+                </div>
+            </div>
+        </div>
+        <div>
+            <article class="article-content" style="text-align: center;">
+                <h1 class="title-box">Who am i?</h1>
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/me.jpg') }}">
+                <br>
+                <br>
+                Nobody 🙃
+            </article>
+            <hr>
+            <article class="article-content moontext" style="text-align: center;">
+                <h2 class="mt-4">Donate to Moonlight Upload (Keep the Moonlight Shining):</h2>
+                <br>
+                <img class="monerochan" src="{{ url_for('static', filename='img/monerochan2.png') }}">
+                <br>
+                <br>
+                🌙 Moonlight Upload relies on the support of our users to keep the moon shining bright. If you enjoy our services and want to help us continue providing a safe and private space for file sharing, consider making a donation.
+                <br>
+                <br>
+                Your support is invaluable and goes a long way in maintaining our platform. Every contribution, big or small, is greatly appreciated. To make a donation, please use Monero and follow the instructions below:
+                <br>
+                <br>
+                <strong>Scan the QR Code:</strong>Use your Monero wallet to scan our QR code.
+                <br>
+                <br>
+                <strong>Send Monero:</strong>Send your donation to our Monero address: [Monero Address].
+                <br>
+                <br>
+                <strong>Thank you for being a part of our community and for your support. Together, we can keep Moonlight Upload thriving!</strong>
+            </article>
+            <div class="container p-4">  
+                <a class="btn btn-primary" href="{{ url_for('index') }}">Back to Home</a>
+            </div>
+        </div>
+        <div class="footer">
+            <footer>
+                <small class="smallprints"><a href="/tos">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></small>
+                <br>
+                <small>2023, Made with ❤️ by <a href="#" target="_blank">Insomnia</a></small>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

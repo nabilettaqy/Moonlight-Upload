@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>Search Results</title>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+</head>
+<body class="center-content">
+
+    <h1>Search Results</h1>
+    <p>Search query: {{ search_query }}</p>
+
+    <div>
+        <table class="center-table"> 
+            <div>
+              <thead>
+                    <tr>
+                        <th>Entry ID</th>
+                        <th>Folder</th>
+                        <th>Filename</th>
+                        <th>IP Address</th>
+                        <th>Upload Date</th>
+                        <th>File Size (MB)</th>
+                        <th>Key</th>
+                        <th>Preview</th>
+                        <th>Downloads</th>
+                        <th>Views</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    {% for entry in entries %}
+                    <tr>
+                        <td>{{ entry.id }}</td>
+                        <td>{{ entry.folder }}</td>
+                        <td>{{ entry.filename }}</td>
+                        <td>{{ entry.ip_address }}</td>
+                        <td>{{ entry.upload_date }}</td>
+                        <td>{{ entry.file_size_mb }}</td>
+                        <td>{{ entry.key }}</td>
+                        <td>{{ entry.preview }}</td>
+                        <td>{{ entry.download_count }}</td>
+                        <td>{{ entry.view_count }}</td>
+                    </tr>
+                   {% endfor %}
+                </tbody>
+            </div>
+        </table>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <small class="smallprints"><a href="/tos">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></small>
+            <br>
+            <small>2023, Made with ❤️ by <a href="#" target="_blank">Insomnia</a></small>
+        </footer>
+    </div>
+</body>
+</html>

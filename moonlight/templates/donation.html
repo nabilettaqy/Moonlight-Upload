@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>Advert - Moonlight Upload</title>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+</head>
+<body class="bg-dark text-light">
+    <div class="container-center">
+        <div class="container p-4">
+            <div>
+                <div class="title-container">
+                    <img class="logo-img" src="{{ url_for('static', filename='img/logo.webp') }}">
+                    <img class="logo-text" src="{{ url_for('static', filename='img/logo6.png') }}">
+                    <img class="logo-mini" src="{{ url_for('static', filename='img/logomini.png') }}">
+                    <br>
+                    <br>
+                    <small class="title-smallprints">No JS, No Cookies, No ads, No Censorship, No Glowies, Your files, your business...</small>
+                    <hr class="rounded">
+                </div>
+            </div>
+        </div>
+        <div class="container p-4">
+            <article class="article-content">
+                <h1 class="title-box">Donate to Moonlight Upload (Keep the Moonlight Shining):</h1>
+                <p class="text-primary">
+                    🌙 Hey there, fellow moonlight enthusiast! Want to help keep this place lit? Donate some Monero and join the secret society of supporters. We're all about Monero - the 'crypto of the night.'
+                    <br>
+                    <br>
+                    <img class="img-fluid" src="{{ url_for('static', filename='img/monerochan.jpg') }}">
+                    <h5>1. Fueling the Night</h5>
+                    💰 "Running Moonlight Upload is a labor of love, and we depend on your support to keep things going. Your Monero donations go a long way to ensure the moon stays up.
+                    <br>
+                    <br>
+                    <h5>2. How to Donate (Monero Only, Plz)</h5>
+                    📡 We keep it exclusive with Monero, the real 'crypto of the shadows.' Here's how you can join the party:
+                    <br>
+                    <br>
+                    <strong>🌕 Scan the QR Code: </strong> Use your Monero wallet to scan our QR code. It's like a digital secret handshake.
+                    <br>
+                    <br>
+                    <strong>💰 Send Monero:</strong> If you're old-school, you can send Monero to our address: [Monero Address]. It's like passing a note in class, but with crypto.
+                    <h5>4. Need Assistance?</h5>
+                    🤖 Got questions or need assistance with Monero donations? Contact us at our telegram: [telegram]. We promise not to overcomplicate things.
+                    <br>
+                    <br>
+                    🌙 Every bit of Monero counts and keeps Moonlight Upload shining bright. We appreciate your support, and you're now part of our cryptic club of Moonlight supporters. Let's keep the night alive together!
+                </p>
+            </article>
+            <a class="btn btn-primary" href="{{ url_for('index') }}">Back to Home</a>
+        </div>
+        <div class="footer">
+            <footer>
+                <small class="smallprints"><a href="/tos">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></small>
+                <br>
+                <small>2023, Made with ❤️ by <a href="#" target="_blank">Insomnia</a></small>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

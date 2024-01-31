@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>Terms of Service - Moonlight Upload</title>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+</head>
+<body class="bg-dark text-light">
+    <div class="container-center">
+        <div class="container p-4">
+            <div>
+                <div class="title-container">
+                    <img class="logo-img" src="{{ url_for('static', filename='img/logo.webp') }}">
+                    <img class="logo-text" src="{{ url_for('static', filename='img/logo6.png') }}">
+                    <img class="logo-mini" src="{{ url_for('static', filename='img/logomini.png') }}">
+                    <br>
+                    <br>
+                    <small class="title-smallprints">No JS, No Cookies, No ads, No Censorship, No Glowies, Your files, your business...</small>
+                    <hr class="rounded">
+                </div>
+            </div>
+        </div>
+        <div class="container p-4">
+            <article class="article-content">
+                <h1 class="title-box">Terms of Service (Time to Read the Fine Print):</h1>
+                <p class="text-primary">
+                    <h5>Last updated: <strong>[Date of last update]</strong></h5>
+
+                    ...
+                </p>
+            </article>
+            <a class="btn btn-primary" href="{{ url_for('index') }}">Back to Home</a>
+        </div>
+        <div class="footer">
+            <footer>
+                <small class="smallprints"><a href="/tos">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></small>
+                <br>
+                <small>2023, Made with ❤️ by <a href="#" target="_blank">Insomnia</a></small>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <title>MOONLIGHT Upload</title>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+</head>
+<body class="bg-dark text-light">
+    <div class="container-center">
+        <div class="container p-4">
+
+            <div>
+                <div class="title-container">
+                   <img class="logo-img" src="{{ url_for('static', filename='img/logo.webp') }}">
+                   <img class="logo-text" src="{{ url_for('static', filename='img/logo6.png') }}">
+                   <img class="logo-mini" src="{{ url_for('static', filename='img/logomini.png') }}">
+                   <br>
+                   <br>
+                   <small class="title-smallprints">No JS, No Cookies, No ads, No Censorship, No Glowies, Your files, your business...</small>
+                   <hr class="rounded">
+                </div>
+            </div>
+
+            <p class="subtitle">{{ main_page_message }}</p>
+
+            <nav aria-label="breadcrumb" style="--pico-nav-breadcrumb-divider: '';">
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="/stats">Stats</a></li>
+                    <li><a href="/donation">Donate</a></li>
+                </ul>
+            </nav>
+
+            <form class="upload-form" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <label class="btn btn-primary">
+                    File:
+                    <input type="file" name="archive" id="archive" class="d-none" required>
+                </label>
+                <label class="btn btn-secondary">
+                    Preview image:
+                    <input type="file" name="preview" id="preview" class="d-none" accept="image/*">
+                </label>
+                {% if loading == false %}
+                <button type="submit" class="btn btn-success">Upload</button>
+                {% endif %}
+                {% if loading == true %}
+                <button aria-busy="true" class="outline">Please wait…</button>
+                {% endif %}
+                <small class="little-message">Please be patient while the file is uploading...</small>
+            </form>
+
+            <div>
+                {% if upload %}
+                <article class="article-content">
+                    <h2 class="mt-4">Upload Successful</h2>
+                    <p class="mb-3">Your file "{{ upload.filename }}" has been uploaded.</p>
+                    <p>Your deletion key is: <strong>{{ upload.key }}</strong></p>
+                    <p>⚠️<strong>Please do not share the key with anyone.</strong>⚠️</p></p>
+                    <p class="success-message">You can use this link to download the file:</p>
+                    <a class="success-link" href="{{ url_for('vault', folder=upload.folder) }}">{{ url_for('vault', folder=upload.folder, _external=True) }}</a>
+                </article>
+                {% endif %}
+                {% if error %}
+                    <p class="error-message">{{ error }}</p>
+                {% endif %}
+            </div>
+            <a href="{{ url_for('delete') }}" class="btn btn-danger mt-3">Delete File</a>
+            <br>
+            <article class="article-content moontext">
+                <h2 class="mt-4">What is Moonlight Upload ?</h2>
+                <br>
+                🌙 Welcome to Moonlight Upload, where the night is dark, and so are yours secrets. 
+                <br>
+                <br>
+                🚫 No glowies here, just an online sanctuary for the internet's underground. We don't ask questions, and we don't keep logs. Your files, your business. 
+                <br>
+                <br>
+                🌐 No geolocation, no bloated scripts, no cookies, no JS, no censorship. 
+                <br>
+                <br>
+                🔒 Unleash your content in the shadows. We're your digital haven where anonymity reigns supreme. File hosting without the fuss. 
+                <br>
+                <br>
+                💰 No fancy suits or corporate greed. Just good ol' file sharing. It's like the wild west of the web, and you're the outlaw. 
+                <br>
+                <br>
+                🌌 Join us under the moonlight, where anonymity meets freedom. 
+            </article>
+        </div>
+        <hr>
+        <div class="container p-4">
+            <article class="article-content moontext">
+                <h2 class="mt-4">Donate to Moonlight Upload (Keep the Moonlight Shining):</h2>
+                <br>
+                <img class="monerochan" src="{{ url_for('static', filename='img/monerochan2.png') }}">
+                <br>
+                <br>
+                🌙 Moonlight Upload relies on the support of our users to keep the moon shining bright. If you enjoy our services and want to help us continue providing a safe and private space for file sharing, consider making a donation.
+                <br>
+                <br>
+                Your support is invaluable and goes a long way in maintaining our platform. Every contribution, big or small, is greatly appreciated. To make a donation, please use Monero and follow the instructions below:
+                <br>
+                <br>
+                <strong>Scan the QR Code:</strong>Use your Monero wallet to scan our QR code.
+                <br>
+                <br>
+                <strong>Send Monero:</strong>Send your donation to our Monero address: [Monero Address].
+                <br>
+                <br>
+                <strong>Thank you for being a part of our community and for your support. Together, we can keep Moonlight Upload thriving!</strong>
+            </article>
+        </div>
+        <div class="footer">
+            <footer>
+                <small class="smallprints"><a href="/tos">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></small>
+                <br>
+                <small>2023, Made with ❤️ by <a href="#" target="_blank">Insomnia</a></small>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
