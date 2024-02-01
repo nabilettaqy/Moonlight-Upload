@@ -2,9 +2,15 @@
 
 Moonlight Upload is a simple, unbloated, and Tor Friendly web application built with Flask that allows users to upload and share files. It features an administration panel for configuration, file management, and basic statistics.
 
+<p align="center">
+  <img src="images/logo.png" />
+</p>
+
 Note: It was a old project that I never finished so the frontend is not 100% responsive, feel free to use the code for your projects...
 
 ## Features
+
+![Main](images/index.png)
 
 - **File Upload:** Users can upload files through the main page.
 - **File Deletion:** Users can delete files using a unique key generated during the upload.
